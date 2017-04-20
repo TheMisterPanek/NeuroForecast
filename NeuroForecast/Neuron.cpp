@@ -5,13 +5,11 @@
 
 Neuron::Neuron()
 {
-	
 }
 
 
 Neuron::~Neuron()
 {
-	
 }
 
 bool Neuron::GetChoise(CommandInfo & command)

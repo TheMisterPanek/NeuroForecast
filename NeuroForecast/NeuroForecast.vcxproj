@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="CommandCollection.h" />
     <ClInclude Include="CommandInfo.h" />
+    <ClInclude Include="FileWorker.h" />
     <ClInclude Include="Neuron.h" />
     <ClInclude Include="Randomizer.h" />
     <ClInclude Include="stdafx.h" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="CommandCollection.cpp" />
     <ClCompile Include="CommandInfo.cpp" />
+    <ClCompile Include="FileWorker.cpp" />
     <ClCompile Include="NeuroForecast.cpp" />
     <ClCompile Include="Neuron.cpp" />
     <ClCompile Include="Randomizer.cpp" />
