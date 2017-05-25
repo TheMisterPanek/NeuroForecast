@@ -1,0 +1,3 @@
+первая команда Win:0 Number of games:4
+вторая команда Win:1 Number of games:5
+третья команда Win:2 Number of games:4

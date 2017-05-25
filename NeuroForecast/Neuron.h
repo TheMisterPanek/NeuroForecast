@@ -4,19 +4,34 @@
 #include <string>
 #include "CommandInfo.h"
 #include "CommandCollection.h"
+#include "Randomizer.h"
 
 using namespace std;
 class Neuron
 {
 public:
-	Neuron();
+	Neuron(string name,CommandCollection & commandCollection);
+	Neuron(string name);
 	~Neuron();
 	
-	bool GetChoise(CommandInfo&);
+	void SaveNeuron();
+	void SaveNeuron(string path);
+
+	void LoadNeuron();
+	void LoadNeuron(string path);
+
+
+	double GetChoise(CommandInfo&);
+
+	string getName();
+	void setName(string value);
 
 	
 private:
-	CommandCollection command;
-	bool TestDo(CommandInfo);
+	string _name;
+
+
+	CommandCollection * command;
+	bool TestDo(CommandInfo command, Randomizer rnd);
 };
 

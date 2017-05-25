@@ -5,10 +5,13 @@
 #include "stdafx.h"
 #include <iostream>
 #include "NeuroForecast.h"
-#include "CommandInfo.h";
+#include "CommandInfo.h"
 #include "CommandCollection.h"
 #include "Neuron.h"
 #include <stdio.h>
+#include "FileWorker.h"
+#include "GameManager.h"
+#include "NeuronFactory.h"
 
 
 using namespace std;
@@ -16,54 +19,28 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "russian");
-	CommandInfo * commandFirst = new CommandInfo("Команда 1", 5, 10);
-	CommandInfo * commandSecond = new CommandInfo("Команда 2", 6, 11);
-	
-	CommandCollection * collection = new CommandCollection();
 
-	collection->Add(*commandFirst);
-	collection->Add(*commandFirst);
-	collection->Add(*commandSecond);
+	NeuronFactory factory = NeuronFactory();
 
-	cout << collection->ToString()<<endl;
+	CommandCollection collection = CommandCollection();
+	collection.Add(CommandInfo("первая команда", 0, 4));
+	collection.Add(CommandInfo("вторая команда", 1, 5));
+	collection.Add(CommandInfo("третья команда", 2, 4));
 
-	collection->Remove(*commandFirst);
-	cout << "Количество команд в памяти:" << collection->Count() << endl;
-	cout << collection->ToString()<<endl;
-	delete collection;
-	
+	vector<Neuron> neurons =  vector<Neuron>();
 
-	cout << "Команда 1 имеет коэфициент " << commandFirst ->GetChanceOfVictory() << endl;
-	cout << "Команда 2 имеет коэфициент " << commandSecond ->GetChanceOfVictory()<< endl;
-
-	Neuron * neuron = new Neuron();
-	const int countGames = 10;
-	bool games[2][countGames];
-	for (int i = 0; i < countGames; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		games[0][i] = neuron->GetChoise(*commandFirst);
-		games[1][i] = neuron->GetChoise(*commandSecond);
-
+		neurons.push_back(factory.CreateNew(&collection));
+	}
+	
+	for (int i = 0; i < neurons.size(); i++)
+	{
+		neurons[i].SaveNeuron();
 	}
 
-	for (int j = 0; j < 2; j++)
-	{
-		for (int i = 0; i < countGames; i++)
-		{
-			cout << games[j][i] << "\t";
-		}
-		cout << endl;
-	}
-
-
-	delete neuron;
-
-
-	delete commandFirst;
-	delete commandSecond;
-	cout << "Привет мир";
-	cout << endl;
 	return 0;
+
 }
 
 

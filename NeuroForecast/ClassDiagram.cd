@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CommandCollection" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgIAAAAAAAQAAAAEIAAABAQAAAEAAAAACAAAgBAAAAA=</HashCode>
+      <FileName>CommandCollection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommandInfo" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEaAAAAABAAAAAAEgABACEAAEIAAAAAAAEQAgABAA=</HashCode>
+      <FileName>CommandInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileWorker" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAACAAACAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>FileWorker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAACACAAIgRgAAAAABAAIBIgQAAAAAAAABQAiA=</HashCode>
+      <FileName>GameManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Neuron" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAAAAAAAAAAAAAAAAgEAAAQAAAJQAAAEIAAAAAA=</HashCode>
+      <FileName>Neuron.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NeuronFactory" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAgAAAAAAAIAAACAAAAAAgAA=</HashCode>
+      <FileName>NeuronFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Randomizer" Collapsed="true">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAAAAA=</HashCode>
+      <FileName>Randomizer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

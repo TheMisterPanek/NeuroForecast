@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -11,5 +12,9 @@ public:
 	~FileWorker();
 	
 	static string ReadAllText(string path);
+	static vector<std::string> ReadAllLines(string path);
+	
+	static void WriteAllText(string path,string text);
+	
 };
 

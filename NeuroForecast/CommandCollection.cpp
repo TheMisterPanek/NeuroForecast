@@ -54,7 +54,25 @@ string CommandCollection::ToString()
 	string resultString = "";
 	for (int i = 0; i < _commands->size(); i++)
 	{
-		resultString += _commands->at(i).GetName()+" ";
+		resultString += _commands->at(i).toString();
+		resultString += "\n\r";
 	}
 	return resultString;
+}
+
+bool CommandCollection::hasNext()
+{
+	if (_position > _commands->size() || &_commands[_position] == nullptr)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+CommandInfo CommandCollection::Next()
+{
+	throw exception();
 }

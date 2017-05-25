@@ -5,6 +5,6 @@ public:
 	Randomizer();
 	~Randomizer();
 
-	static float GetPercent();
+	float GetPercent();
 };
 
